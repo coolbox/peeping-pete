@@ -6,23 +6,17 @@ getPaginationLinks = ->
   paginationLinks = document.querySelectorAll "ul.pagination a.page-link"
   Array::map.call paginationLinks, (e) -> e.getAttribute "href"
 
-# searchTerms = [
-#   "javascript"
-#   "ruby on rails"
-#   "coffeescript"
-#   "startup investor"
-#   "strava"
-#   "Data Visualization"
-#   "runkeeper"
-#   "front end developer"
-#   "backend developer"
-#   "web developer"
-# ]
-
 searchTerms = [
+  "javascript"
+  "ruby on rails"
+  "coffeescript"
+  "startup investor"
+  "strava"
+  "Data Visualization"
   "runkeeper"
   "front end developer"
   "backend developer"
+  "web developer"
 ]
 
 links = []

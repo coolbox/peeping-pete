@@ -5,8 +5,6 @@ getLinks = ->
 links = []
 
 casper = require('casper').create
-  verbose: true
-  logLevel: 'debug'
   pageSettings:
     loadImages: false
     loadPlugins: false

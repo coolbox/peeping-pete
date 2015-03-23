@@ -17,6 +17,22 @@ searchTerms = [
   "front end developer"
   "backend developer"
   "web developer"
+  "silicon valley"
+  "coffeescript"
+  "startup advisor"
+  "startup mentor"
+  "graphic designer"
+  "marketing genius"
+  "ios developer"
+  "mobile developer"
+  "startup hacker"
+  "ycombinator"
+  "500 startups"
+  "ignite accelerator"
+  "startup accelerator"
+  "techstars"
+  "wayra"
+  "freeletics"
 ]
 
 links = []
@@ -65,7 +81,17 @@ casper.repeat numberTimes, ->
       # 2nd connection input button
       @thenClick "input#S-N-ffs", =>
         # Collect pagination links
-        @wait 2000, =>
+        @wait 2000, =>          
+          # Get the current page links
+          links = []
+          links = links.concat @evaluate(getLinks)
+          @echo "#{@getTitle()} - Links: #{links.length}"
+          links.forEach (link) =>
+            # Lets wait a little so as not to upset LinkedIn
+            @wait 5000, =>
+              @thenOpen link, =>
+                @echo @getTitle()
+
           paginationLinks = @evaluate(getPaginationLinks)
           paginationLinks.forEach (pageLink) =>
             @echo "PAGE: #{pageLink}"

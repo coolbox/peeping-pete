@@ -21,7 +21,7 @@ casper.start 'https://www.linkedin.com', ->
   @echo this.getTitle()
   @fill 'form#login',
     session_key: '** YOUR EMAIL **'
-    session_password: '**YOUR PASSWORD**'
+    session_password: '** YOUR PASSWORD **'
   , true
 
 casper.then ->

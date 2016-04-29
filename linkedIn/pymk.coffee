@@ -30,8 +30,8 @@ casper.on 'page.error', (msg, trace) ->
 casper.start root_url, ->
   @echo "Start: #{@getTitle()}"
   @fill 'form#login',
-    session_key: '** YOUR EMAIL **'
-    session_password: '** YOUR PASSWORD **'
+    session_key: 'pete.roome@gmail.com'
+    session_password: 'mzlapq04'
   , true
 
 # Visit advanced search

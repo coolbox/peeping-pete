@@ -42,3 +42,14 @@ In this repo is a folder of LinkedIn related scripts.
 Go in too hard and LinkedIn will stop your access to the web platform.
 
 Run Script 2 too regularly and you will use up your free amount of advanced searches. The outcome of this is that there is only one page of profiles to open - no paginated results. The script will continue however.
+
+
+
+## Running scripts
+casperjs --ssl-protocol=tlsv1 homepage.coffee
+
+## Installing Casper JS
+Use the Capserjs Devel package.
+brew install casperjs --devel
+
+Make sure PhantomJS < 2.0

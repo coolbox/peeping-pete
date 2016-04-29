@@ -17,11 +17,11 @@ casper.on 'remote.message', (msg) ->
 casper.on 'page.error', (msg, trace) ->
   @echo "Page Error: #{msg}", 'ERROR'
 
-casper.start 'https://www.linkedin.com', ->
+casper.start 'https://www.linkedin.com/nhome', ->
   @echo this.getTitle()
   @fill 'form#login',
-    session_key: '** YOUR EMAIL **'
-    session_password: '** YOUR PASSWORD **'
+    session_key: 'pete.roome@gmail.com'
+    session_password: 'mzlapq04'
   , true
 
 casper.then ->
